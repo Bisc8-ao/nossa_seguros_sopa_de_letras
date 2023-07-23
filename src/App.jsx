@@ -1,16 +1,16 @@
-import './App.scss'
-import { ChakraProvider } from '@chakra-ui/react'
-import { AppRouter } from './routes'
+import "./App.scss";
+import { TimerProvider } from "./context/timerContext";
+import { ChakraProvider } from "@chakra-ui/react";
+import { AppRouter } from "./routes";
 
 function App() {
-
   return (
-    <div className="App">
-      <ChakraProvider>
+    <ChakraProvider>
+      <TimerProvider className="App">
         <AppRouter />
-      </ChakraProvider>
-    </div>
-  )
+      </TimerProvider>
+    </ChakraProvider>
+  );
 }
 
-export default App
+export default App;

@@ -2,4 +2,5 @@
 export * from './start';
 export * from './info';
 export * from './game';
-export * from './end';
+export * from './win';
+export * from './lose';
