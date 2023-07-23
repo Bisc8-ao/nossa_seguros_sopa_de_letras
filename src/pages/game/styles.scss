@@ -1,0 +1,176 @@
+.flip_wrapper_so {
+    min-height: 100vh;
+    max-height: 100vh;
+  
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue_main;
+  }
+  
+  .game_container_so {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+  
+  .header_container_so {
+    width: 100%;
+    padding: 1rem 0;
+  
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .timer_so {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  
+    div {
+      width: 6rem;
+      height: 6rem;
+  
+      display: block;
+      background-color: $green_main;
+      padding: 0.6rem 0.8rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white_main;
+      font-size: 3rem;
+    }
+  }
+  
+  .header_logo_so {
+    width: 12rem;
+    margin: auto;
+  }
+  
+  .highligt_so {
+    color: $green_main;
+    font-size: 2rem;
+  }
+  
+  .footer_info_so {
+    color: $white_main;
+  }
+  
+  .grid_wrapper_so {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .end_time div {
+    background-color: red;
+  }
+  
+  .letters_so {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: .8rem;
+  }
+  
+  .hint_so {
+    width: 100%;
+    border: 1px solid $white_main;
+  
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+  
+    ul li {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $white_main;
+    }
+  }
+  
+  
+  .individual_so {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $white_main;
+    border-radius: 2px;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1rem;
+  
+    color: $white_main;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 1080px) {
+    .header_logo_so {
+      width: 36rem;
+    }
+  
+    .highligt_so {
+      font-size: 5rem;
+    }
+  
+    .footer_info_so {
+      font-size: 2rem;
+    }
+  
+    .card {
+      width: 12rem !important;
+    }
+  }
+  
+  
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

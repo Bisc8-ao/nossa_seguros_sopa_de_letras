@@ -1,0 +1,95 @@
+
+
+
+#table{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+  
+    transition-duration: 1s;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+  
+  /*.board - class div que contém as letras e palavras a encontrar. tem altura e largura de 600px, é apresentada em grelha (para as letras) 
+  tem espaçamento de 2.4px entre cada elemento, margem à direita de 20px e ocupa 2 flex (no caso 2/3 do espaço de .table, pois .usedWords ocupa 1 flex)*/
+  .board {
+    width: 100%;
+    display: grid;
+    gap: 0.40em;
+    margin-right: 1em;
+    flex: 1;
+    flex-direction: row;
+    pointer-events: none
+  }
+  
+  /*.usedWords - class div que contém as palavras a encontrar.Ocupa 1 flex (no caso 1/3 do espaço de .table, pois .board ocupa 2 flex)*/
+  .boxUsedWords{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    background-color: $blue_main;
+    color: $green_main;
+    font-weight: 700;
+    border-radius: 10px;
+  }
+  
+  .usedWords {
+    min-width: 10%;
+    font-size: 1em;
+    white-space: pre-line;
+
+    display: flex;
+    gap: 1rem;
+  }
+  
+  
+  .foundWord {
+    text-decoration: line-through;
+  }
+  
+  .new-wordBox{
+    width: 100%;
+  }
+  
+  #btNewWord{
+    width: 100%;
+    height: 3em;
+    box-sizing: border-box;
+  
+    background-color: #8ed0f7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  
+    transition-duration: 0.4s;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  #btNewWord:hover{
+    background-color: #4bb2e2f1;
+    color: rgb(0, 0, 0);
+    transform: scale(1.03);
+  }
+  
+  
