@@ -8,7 +8,7 @@ import "./styles.scss";
 
 const Win = () => {
   const { resetState } = useContext(TimerContext);
-  const { nossaSeguros } = assets();
+  const { nossa_seguros } = assets();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Win = () => {
       <Confetti width={window.innerWidth} height={window.innerHeight} />
       <div className="first_content_en">
         <div className="logo_container_en">
-          <img src={nossaSeguros} alt="Nossa Seguros Logo" />
+          <img src={nossa_seguros} alt="Nossa Seguros Logo" />
         </div>
         <div className="text_container_en">
           <p>
