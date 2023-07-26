@@ -12,27 +12,39 @@ function Letter(props) {
   const { lett, index, selecting, setSelecting, setSelection, isFound } = props;
 
   let ind = index;
-  function click() {
-    console.log("KEY: " + ind + " | LETER: " + lett);
-    //setletter(lett);
+
+  function handleClick() {
+    if (selecting) {
+      console.log("LARGOU: KEY: " + ind + " | LETER: " + lett);
+      setSelection([ind, lett]);
+      setSelecting(false);
+    } else {
+      console.log("A SIGURAR: KEY: " + ind + " | LETER: " + lett);
+      setSelection([ind, lett]);
+      setSelecting(true);
+    }
   }
 
-  function down() {
-    console.log("A SIGURAR: KEY: " + ind + " | LETER: " + lett);
-    setSelection([ind, lett]);
-    setSelecting(true);
-  }
+  // function down() {
+  //   console.log("###############################");
+  //   console.log("A SIGURAR: KEY: " + ind + " | LETER: " + lett);
+  //   setSelection([ind, lett]);
+  //   setSelecting(true);
+  //   console.log("###############################");
+  // }
 
-  function up() {
-    console.log("LARGOU: KEY: " + ind + " | LETER: " + lett);
-    setSelection([ind, lett]);
-    setSelecting(false);
-  }
+  // function up() {
+  //   console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+  //   console.log("LARGOU: KEY: " + ind + " | LETER: " + lett);
+  //   setSelection([ind, lett]);
+  //   setSelecting(false);
+  //   console.log("###############################");
+  // }
 
   const found = isFound ? "found" : "letter";
 
   return (
-    <div className={found} onMouseDown={down} onMouseUp={up}>
+    <div className={found} onClick={handleClick}>
       <div key={index} className="letterInner" id={"letterInner"}>
         {lett}
       </div>

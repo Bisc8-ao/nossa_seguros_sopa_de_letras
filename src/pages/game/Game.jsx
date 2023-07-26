@@ -114,9 +114,8 @@ function Game() {
   useEffect(() => {
     let endGame = true;
 
-    console.log("==========> teste <============");
-
     if (selecting) {
+      console.log("==== Selecionando: ")
       startKey = selection[0];
     } else if (!selecting) {
       console.log("End game inicio do callback: " + endGame);
